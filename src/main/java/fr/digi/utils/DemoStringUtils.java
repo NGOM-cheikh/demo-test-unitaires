@@ -1,4 +1,4 @@
-package fr.diginamic.utils;
+package fr.digi.utils;
 
 public class DemoStringUtils {
 

@@ -1,4 +1,6 @@
-package fr.diginamic.immobilier.entites;
+
+
+package fr.digi.immobilier.entites;
 /** Représente une maison avec toutes ses pièces
  * @author DIGINAMIC
  *
@@ -11,7 +13,7 @@ public class Maison {
 	/**
 	 * Constructeur
 	 */
-	public Maison(){
+	public Maison(Integer i){
 		// Initialisation du tableau de pièces
 		pieces = new Piece[0];
 	}
@@ -40,6 +42,10 @@ public class Maison {
 		// Enfin on affecte newTab à pieces
 		this.pieces=newTab;
 	}
+	
+	public int nbPieces() {
+		return pieces.length-1;
+	}
 
 	/** Retourne la superficie d'un étage
 	 * @param choixEtage choix de l'étage
@@ -50,7 +56,7 @@ public class Maison {
 
 		for (int i = 0; i < pieces.length; i++) {
 			if (choixEtage == this.pieces[i].getNumEtage()) {
-				superficieEtage = superficieEtage + this.pieces[i].getSuperficie();
+				superficieEtage = this.pieces[i].getSuperficie();
 			}
 		}
 
@@ -64,7 +70,7 @@ public class Maison {
 	public double superficieTypePiece(String typePiece) {
 		double superficie = 0;
 
-		for (int i = 0; i < pieces.length; i++) {
+		for (int i = 1; i < pieces.length; i++) {
 			if (typePiece!=null && typePiece.equals(this.pieces[i].getType())) {
 				superficie = superficie + this.pieces[i].getSuperficie();
 			}
@@ -86,4 +92,17 @@ public class Maison {
 		return superficieTot;
 	}
 
+	/** Getter pour l'attribut pieces
+	 * @return the pieces
+	 */
+	public Piece[] getPieces() {
+		return pieces;
+	}
+
+	public int getSurface() {
+	}
+
+	public void setSurface(int i) {
+	}
+  }
 }

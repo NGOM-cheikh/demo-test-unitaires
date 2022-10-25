@@ -1,21 +1,21 @@
-package fr.diginamic.immobilier.entites;
-/** Pièce de type cuisine
+package fr.digi.immobilier.entites;
+/** Pièce de type salle de bain
  * @author DIGINAMIC
  *
  */
-public class Cuisine extends Piece {
+public class SalleDeBain extends Piece {
 
 	/** Constructeur
 	 * @param etage étage
 	 * @param superficie superficie
 	 */
-	public Cuisine(int etage, double superficie) {
+	public SalleDeBain(int etage, double superficie) {
 		super(etage, superficie);
 	}
 	
 	@Override
 	public String getType() {
-		return TYPE_CUISINE;
+		return TYPE_SDB;
 	}
 
 }

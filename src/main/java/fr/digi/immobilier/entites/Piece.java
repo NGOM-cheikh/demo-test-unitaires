@@ -1,4 +1,4 @@
-package fr.diginamic.immobilier.entites;
+package fr.digi.immobilier.entites;
 /** Représente une pièce abstraite
  * @author DIGINAMIC
  *

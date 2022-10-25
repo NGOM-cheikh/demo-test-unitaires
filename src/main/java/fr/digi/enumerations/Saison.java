@@ -1,4 +1,7 @@
-package fr.diginamic.enumerations;
+
+// TP Tests unitaires
+
+package fr.digi.enumerations;
 /**
  * Représente une saison et fournit les 4 instances de saisons.
  * 
@@ -35,8 +38,11 @@ public enum Saison {
 	public static Saison valueOfLibelle(String libelle) {
 		Saison[] saisons = Saison.values();
 		for (Saison saison : saisons) {
-			if (saison.getLibelle().equals(libelle)) {
+			if (libelle.equals(saison.getLibelle())) {
 				return saison;
+			}
+			else {
+				return null;
 			}
 		}
 		return null;
